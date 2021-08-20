@@ -1,0 +1,11 @@
+.DS_Store
+/_deliverables
+/aicc
+/build
+/dist
+/tmp
+~$*.doc*
+~$*.xls*
+coverage
+node_modules
+package-lock.json
