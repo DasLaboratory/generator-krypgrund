@@ -1,8 +1,6 @@
 # @das.laboratory/generator-krypgrund
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Known Vulnerabilities](https://snyk.io/test/github/DasLaboratory/generator-krypgrund/badge.svg)](https://snyk.io/test/github/DasLaboratory/generator-krypgrund) ![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/DasLaboratory/generator-krypgrund) ![npm (scoped)](https://img.shields.io/npm/v/@das.laboratory/generator-krypgrund)
-
-Gnargh!
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Known Vulnerabilities][snyk-image]][snyk-url] [![Libraries.io dependency status for GitHub repo][shields-librariesio-image]][shields-librariesio-url] [![npm (scoped)][shields-npm-image]][shields-npm-url]
 
 > This generator will set up a workspace equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.
 
@@ -40,3 +38,9 @@ yo @das.laboratory/krypgrund
 [daviddm-url]: https://david-dm.org/DasLaboratory/generator-krypgrund
 [coveralls-image]: https://coveralls.io/repos/github/DasLaboratory/generator-krypgrund/badge.svg?branch=main
 [coveralls-url]: https://coveralls.io/github/DasLaboratory/generator-krypgrund?branch=main
+[snyk-url]: https://snyk.io/test/github/DasLaboratory/generator-krypgrund
+[snyk-image]: https://snyk.io/test/github/DasLaboratory/generator-krypgrund/badge.svg
+[shields-librariesio-url]: https://libraries.io/github/DasLaboratory/generator-krypgrund
+[shields-librariesio-image]: https://img.shields.io/librariesio/github/DasLaboratory/generator-krypgrund
+[shields-npm-url]: https://www.npmjs.com/package/@das.laboratory/generator-krypgrund
+[shields-npm-image]: https://img.shields.io/npm/v/@das.laboratory/generator-krypgrund

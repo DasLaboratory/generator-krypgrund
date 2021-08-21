@@ -1,0 +1,16 @@
+{
+	"name": "nyan-nyan-cat",
+	"version": "1.0.0",
+	"description": "Like getting rickrolled, but with Nyancat.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"nyan": "node index.js",
+		"postinstall": "npm run nyan"
+	},
+	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (http://daslaboritory.com/)",
+	"license": "UNLICENSED",
+	"dependencies": {
+		"@das.laboratory/nyan": "^1"
+	}
+}
