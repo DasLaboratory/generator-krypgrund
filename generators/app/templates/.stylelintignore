@@ -1,0 +1,9 @@
+# Next line is to see if we are using the .stylelintignore file from the home directory. Usefull in debug mode.
+home.example.css
+**/dist/**
+**/node_modules/**
+**/build/**
+**/apis/**
+src/css/style.css
+*.min.css
+*.min.scss

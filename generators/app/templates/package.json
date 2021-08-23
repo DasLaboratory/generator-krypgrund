@@ -1,16 +1,41 @@
 {
-	"name": "nyan-nyan-cat",
+	"name": "@das.laboratory/krypgrund",
 	"version": "1.0.0",
-	"description": "Like getting rickrolled, but with Nyancat.",
+	"description": "This workspace is equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.",
 	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"nyan": "node index.js",
-		"postinstall": "npm run nyan"
-	},
-	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (http://daslaboritory.com/)",
+	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (https://daslaboritory.com)",
 	"license": "UNLICENSED",
 	"dependencies": {
-		"@das.laboratory/nyan": "^1"
+		"@das.laboratory/eslint-config-interactive": "file:/./__tarballs/das.laboratory-eslint-config-interactive-1.1.1.tgz",
+		"@das.laboratory/gulp-plugin-interactive": "file:/./__tarballs/das.laboratory-gulp-plugin-interactive-1.6.4.tgz",
+		"@das.laboratory/htmlhint-config-interactive": "file:/./__tarballs/das.laboratory-htmlhint-config-interactive-1.0.1.tgz",
+		"@das.laboratory/interactive-config-main": "file:/./__tarballs/das.laboratory-interactive-config-main-1.0.16.tgz",
+		"@das.laboratory/prettier-config-interactive": "file:/./__tarballs/das.laboratory-prettier-config-interactive-1.1.0.tgz",
+		"@das.laboratory/stylelint-config-interactive": "file:/./__tarballs/das.laboratory-stylelint-config-interactive-1.0.6.tgz",
+		"@das.laboratory/vscode-config-interactive": "file:/./__tarballs/das.laboratory-vscode-config-interactive-1.0.9.tgz",
+		"npm-run-all": "4.1.5"
+	},
+	"scripts": {
+		"bump:major": "npm version major -f -m \"[v%s] $npm_config_message\"",
+		"bump:minor": "npm version minor -f -m \"[v%s] $npm_config_message\"",
+		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
+		"do-not-postinstall": "npm run peer-inst && npm run show-vscode-config",
+		"lint": "cd \"$INIT_CWD\" && npm run lint:eslint; npm run lint:stylelint; npm run lint:prettier;",
+		"lint:eslint": "echo \"$INIT_CWD\" && eslint --fix \"$INIT_CWD\"",
+		"lint:prettier": "echo \"$INIT_CWD\" && prettier --write \"$INIT_CWD\"",
+		"lint:stylelint": "echo \"$INIT_CWD\" && stylelint --fix \"$INIT_CWD/**/*.{css,scss,sass}\"",
+		"peer-inst": "npm-run-all peer-inst:*",
+		"peer-inst:eslint": "install-peerdeps --dev @das.laboratory/eslint-config-interactive --auth ddf707ea-dc5d-4112-bc60-2fbee636eb92",
+		"peer-inst:gulp": "install-peerdeps --dev @das.laboratory/gulp-plugin-interactive --auth ddf707ea-dc5d-4112-bc60-2fbee636eb92",
+		"peer-inst:htmlhint": "install-peerdeps --dev @das.laboratory/htmlhint-config-interactive --auth ddf707ea-dc5d-4112-bc60-2fbee636eb92",
+		"peer-inst:prettier": "install-peerdeps --dev @das.laboratory/prettier-config-interactive --auth ddf707ea-dc5d-4112-bc60-2fbee636eb92",
+		"peer-inst:stylelint": "install-peerdeps --dev @das.laboratory/stylelint-config-interactive --auth ddf707ea-dc5d-4112-bc60-2fbee636eb92",
+		"peer-inst:vscode": "install-peerdeps --dev @das.laboratory/vscode-config-interactive --auth ddf707ea-dc5d-4112-bc60-2fbee636eb92",
+		"postversion": "git push && git push --tags && npm publish",
+		"preversion": "git add .",
+		"show-vscode-config": "node node_modules/@das.laboratory/vscode-config-interactive",
+		"stylelint-check": "stylelint-config-prettier-check",
+		"update": "npm-run-all peer-inst:*",
+		"version": "git add ."
 	}
 }

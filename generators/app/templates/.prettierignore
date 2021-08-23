@@ -1,0 +1,10 @@
+# Next line is to see if we are using the .prettierignore file from the home directory. Usefull in debug mode.
+home.example.js
+**/dist/**
+**/node_modules/**
+**/build/**
+**/apis/**
+*.min.js
+src/css/style.css
+*.min.css
+*.min.scss
