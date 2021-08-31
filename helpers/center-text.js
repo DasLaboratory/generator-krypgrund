@@ -1,5 +1,6 @@
 const wrapAnsi = require('wrap-ansi');
 const pad = require('pad-component');
+const align = require('wide-align');
 // const stringWidth = require('string-width');
 // const stringLength = require('string-length');
 
@@ -12,7 +13,7 @@ function centerText(input, textLength, lineLength) {
 
 	for (const line in wrappedArray) {
 		if (Object.hasOwnProperty.call(wrappedArray, line)) {
-			paddedArray[line] = pad(wrappedArray[line], lineLength, ' ');
+			paddedArray[line] = align.center(wrappedArray[line], lineLength);
 		}
 	}
 	// console.log('stringWidth', stringWidth(input));

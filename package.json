@@ -1,22 +1,51 @@
 {
 	"name": "@das.laboratory/generator-krypgrund",
-	"version": "2.0.0",
-	"date": "2021-08-21",
+	"version": "0.0.0",
+	"private": false,
 	"description": "This generator will set up a workspace equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.",
-	"homepage": "https://daslaboratory.com",
+	"repository": "git@github.com:DasLaboratory/generator-krypgrund.git",
 	"author": {
 		"name": "Nicolas Reibnitz",
 		"email": "n.reibnitz@gmail.com",
 		"url": "https://daslaboratory.com"
 	},
-	"files": [
-		"generators"
-	],
+	"homepage": "https://daslaboratory.com",
 	"main": "generators/index.js",
+	"engines": {
+		"npm": ">= 4.0.0"
+	},
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "jest --coverage",
+		"bump:major": "npm version major -f -m \"[v%s] $npm_config_message\"",
+		"bump:minor": "npm version minor -f -m \"[v%s] $npm_config_message\"",
+		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
+		"postversion": "git push && git push --tags && npm publish",
+		"preversion": "git add .",
+		"version": "git add ."
+	},
+	"files": [
+		"generators",
+		"helpers"
+	],
 	"keywords": [
 		"",
 		"yeoman-generator"
 	],
+	"dependencies": {
+		"@das.laboratory/eslint-config-interactive": "latest",
+		"@das.laboratory/vscode-config-interactive": "latest",
+		"@types/yeoman-generator": "^4.11.3",
+		"boxen": "^5.0.1",
+		"chalk": "^4.1.2",
+		"cli-table3": "^0.6.0",
+		"del": "^6.0.0",
+		"press-any-key": "^0.1.1",
+		"wide-align": "^1.1.3",
+		"wrap-ansi": "^7",
+		"yeoman-generator": "^4.13.0",
+		"yosay": "^2.0.2"
+	},
 	"devDependencies": {
 		"coveralls": "^3.0.7",
 		"eslint": "^7.32.0",
@@ -30,38 +59,7 @@
 		"yeoman-assert": "^3.1.1",
 		"yeoman-test": "^6.2.0"
 	},
-	"engines": {
-		"npm": ">= 4.0.0"
-	},
-	"dependencies": {
-		"@das.laboratory/eslint-config-interactive": "^2.0.0",
-		"@types/yeoman-generator": "^4.11.3",
-		"boxen": "^5.0.1",
-		"chalk": "^4.1.2",
-		"del": "^6.0.0",
-		"press-any-key": "^0.1.1",
-		"wide-align": "^1.1.3",
-		"yeoman-generator": "^4.13.0",
-		"yosay": "^2.0.2"
-	},
-	"jest": {
-		"testEnvironment": "node"
-	},
-	"lint-staged": {
-		"*.js": [
-			"eslint --fix",
-			"git add"
-		],
-		"*.json": [
-			"prettier --write",
-			"git add"
-		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
+	"date": "2021-08-31",
 	"eslintConfig": {
 		"extends": [
 			"xo",
@@ -78,10 +76,22 @@
 			"prettier"
 		]
 	},
-	"scripts": {
-		"pretest": "eslint .",
-		"test": "jest --coverage"
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	},
-	"repository": "git@github.com:DasLaboratory/generator-krypgrund.git",
-	"private": false
+	"jest": {
+		"testEnvironment": "node"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"git add"
+		],
+		"*.json": [
+			"prettier --write",
+			"git add"
+		]
+	}
 }

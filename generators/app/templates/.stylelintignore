@@ -7,3 +7,6 @@ home.example.css
 src/css/style.css
 *.min.css
 *.min.scss
+*.cjs
+*.json
+*.txt
