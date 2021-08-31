@@ -1,12 +1,28 @@
 # @das.laboratory/generator-krypgrund
 
+> This [Yeoman](http://yeoman.io) generator will set up a workspace equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.
+
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Known Vulnerabilities][snyk-image]][snyk-url] [![Libraries.io dependency status for GitHub repo][shields-librariesio-image]][shields-librariesio-url] [![npm (scoped)][shields-npm-image]][shields-npm-url]
 
-> This generator will set up a workspace equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.
+---
+
+## ⚠️ WARNING ⚠️
+
+Even though I heavily tested this generator, I would highly recommend **MOVING YOUR `interactive_workspace` FOLDER** (or wherever your precious work is located) to a secure location **OUTSIDE OF YOUR EXISTING `~/krypgrund` FOLDER BEFORE YOU CONTINUE!!**
+
+Why not to your desktop? 🙈
+
+You should move the workspace folder back into the krypgrund folder only after the generator is completely done!
+
+💀 **SERIOUSLY!** 💀
+
+But as I said, it should be totally safe! 😬 Just imagine...
+
+---
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and @das.laboratory/generator-krypgrund using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and @das.laboratory/generator-krypgrund using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)):
 
 ```bash
 npm install -g yo
