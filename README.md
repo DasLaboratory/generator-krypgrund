@@ -26,7 +26,7 @@ First, install [Yeoman](http://yeoman.io) and @das.laboratory/generator-krypgrun
 
 ```bash
 npm install -g yo
-npm install -g @das.laboratory/generator-krypgrund
+npm install -g '@das.laboratory/generator-krypgrund'
 ```
 
 Then generate your new project:

@@ -1,6 +1,10 @@
 function clearScreen(context) {
-	context.spawnCommandSync('clear');
-	context.log('[3J');
+	const isMac = process.platform === 'darwin';
+
+	if (isMac) {
+		context.spawnCommandSync('clear');
+		context.log('[3J');
+	}
 }
 
 module.exports = clearScreen;

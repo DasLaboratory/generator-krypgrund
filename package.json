@@ -1,6 +1,6 @@
 {
 	"name": "@das.laboratory/generator-krypgrund",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"private": false,
 	"description": "This generator will set up a workspace equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.",
 	"repository": "git@github.com:DasLaboratory/generator-krypgrund.git",
