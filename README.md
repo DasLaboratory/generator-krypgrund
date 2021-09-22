@@ -47,13 +47,26 @@ On macOS this should all be pretty straightforward, but...
 ## Notes On Windows
 
 ![big-gulp-on-windows](/_assets/big-gulp-on-windows.jpg)
-Node.js projects on Windows are a curious animal. And I can't call myself a Windows power user anymore. Not by a long shot. But I managed to successfully install the 'krypgrund' development environment under different circumstances and run [Big Gulp™](https://www.npmjs.com/package/@das.laboratory/gulp-plugin-interactive):
+Node.js projects on Windows are a curious animal. And I can't call myself a Windows power user anymore. Not by a long shot. But I managed to successfully install the 'krypgrund' development environment under different circumstances and run [Big Gulp™](https://www.npmjs.com/package/@das.laboratory/gulp-plugin-interactive).
 
+##### I tried the following terminal emulators
+
+-   using [Cmder](https://cmder.net/) (v1.3.18 that "full version")
+-   using the normal [cmd.exe](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) Command Prompt
 -   using [Ubuntu v20.04](https://ubuntu.com/wsl) running in [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL 2 v5.4.72 I think. Not easy to say for sure.)
 -   using [Windows PowerShell 5.1](https://docs.microsoft.com/en-us/powershell/) (v5.1.19041.1151)
 -   using [PowerShell 7](https://github.com/PowerShell/PowerShell) (v7.1.40)
 
-When it comes to Node.js it was
+Enough for a quick proof of concept, I'd say.
+
+All running in [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) (v1.10.2383.0).
+
+**Note:** Make sure to check that page out! That crazy video is the weirdest overstatement for a terminal emulator I've ever seen! Ever! Seems almost ironical! 😄  
+... Well, there is [eDEX-UI](https://github.com/GitSquared/edex-ui) of course. 🤔
+
+Anyways...
+
+##### When it comes to Node.js I had
 
 -   [Node.js](https://nodejs.org/) v14.17.0
 -   [npm](https://docs.npmjs.com/about-npm) v7.24.0
@@ -95,9 +108,9 @@ For PowerShell v7.1 go here: [Installing PowerShell on Windows](https://docs.mic
 Get the full Node.js package here: [nodejs.org](https://nodejs.org/en/download/).
 To update npm run `npm install -g npm`.
 
-## Cheers,
+### Cheers, Nicolas
 
-[Nicolas](https://daslaboratory.com)
+Made with ☠️ in [𝕯𝖆𝖘 𝕷𝖆𝖇𝖔𝖗𝖆𝖙𝖔𝖗𝖞®](https://☠daslaboratory.com)
 
 [npm-image]: https://badge.fury.io/js/%40das.laboratory%2Fgenerator-krypgrund.svg
 [npm-url]: https://www.npmjs.com/package/@das.laboratory/generator-krypgrund
