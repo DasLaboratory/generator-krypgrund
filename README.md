@@ -22,29 +22,82 @@ But as I said, it should be totally safe! 😬 Just imagine...
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and @das.laboratory/generator-krypgrund using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)):
+First, install [Yeoman](http://yeoman.io) and [@das.laboratory/generator-krypgrund](https://www.npmjs.com/package/@das.laboratory/generator-krypgrund) using [npm](https://www.npmjs.com/)  
+(I assume you have [node.js](https://nodejs.org/) already installed, if not I strongly suggest using [nvm](https://github.com/nvm-sh/nvm) on macOS):
 
 ```bash
 npm install -g yo
 npm install -g '@das.laboratory/generator-krypgrund'
 ```
 
-Then generate your new project:
+Then set up your development environment by running
 
 ```bash
-yo @das.laboratory/krypgrund
+yo '@das.laboratory/krypgrund'
 ```
 
-## Getting To Know Yeoman
+You can update `generator-krypgrund` using
 
--   Yeoman has a heart of gold.
--   Yeoman is a person with feelings and opinions, but is very easy to work with.
--   Yeoman can be too opinionated at times but is easily convinced not to be.
--   Feel free to [learn more about Yeoman](http://yeoman.io/).
+```bash
+npm install -g '@das.laboratory/generator-krypgrund'
+```
 
-## License
+On macOS this should all be pretty straightforward, but...
 
-© [Nicolas Reibnitz](https://daslaboratory.com)
+## Notes On Windows
+
+![big-gulp-on-windows](/_assets/big-gulp-on-windows.jpg)
+Node.js projects on Windows are a curious animal. And I can't call myself a Windows power user anymore. Not by a long shot. But I managed to successfully install the 'krypgrund' development environment under different circumstances and run [Big Gulp™](https://www.npmjs.com/package/@das.laboratory/gulp-plugin-interactive):
+
+-   using [Ubuntu v20.04](https://ubuntu.com/wsl) running in [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL 2 v5.4.72 I think. Not easy to say for sure.)
+-   using [Windows PowerShell 5.1](https://docs.microsoft.com/en-us/powershell/) (v5.1.19041.1151)
+-   using [PowerShell 7](https://github.com/PowerShell/PowerShell) (v7.1.40)
+
+When it comes to Node.js it was
+
+-   [Node.js](https://nodejs.org/) v14.17.0
+-   [npm](https://docs.npmjs.com/about-npm) v7.24.0
+
+The problems I found were connected to using the `clear` command to clear the screen, used in `generator-krypgrund` as well as `vscode-config-interactive`. I fixed that in the packages.
+
+Another problem was that I couldn't build the binaries for a (optional) dependency of [ssh2](https://www.npmjs.com/package/ssh2). Namely [cpu-features](https://www.npmjs.com/package/cpu-features). I could fix this by manually installing [CMake](https://cmake.org/) v3.21.3 ([cmake-3.21.3-windows-x86_64.msi](https://github.com/Kitware/CMake/releases/download/v3.21.3/cmake-3.21.3-windows-x86_64.msi)) and (I think more importantly) updating npm from v6.14.13 to v7.24.0.
+
+I also found that the quotes in the commands used to install krypgrund are necessary (because of the @ symbol).
+
+#### Get Version Information
+
+###### Windows Subsystem for Linux (WSL)
+
+From the WSL shell prompt run `uname -r`.
+From a PowerShell prompt run `wsl -l -v` (less informative).
+
+###### (Windows) PowerShell
+
+From the WSL shell prompt run `Get-Host | Select-Object Version`. Yup. Seriously. Talking about esoteric.
+
+###### Node.js/npm
+
+From wherever run `node --version` or `npm --version`.
+
+#### Get Updates
+
+###### Windows Subsystem for Linux (WSL)
+
+See here: [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
+
+###### (Windows) PowerShell
+
+For PowerShell v5.1 go here: [Installing PowerShell on Windows](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-5.1)
+For PowerShell v7.1 go here: [Installing PowerShell on Windows](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.1)
+
+###### Node.js/npm
+
+Get the full Node.js package here: [nodejs.org](https://nodejs.org/en/download/).
+To update npm run `npm install -g npm`.
+
+## Cheers,
+
+[Nicolas](https://daslaboratory.com)
 
 [npm-image]: https://badge.fury.io/js/%40das.laboratory%2Fgenerator-krypgrund.svg
 [npm-url]: https://www.npmjs.com/package/@das.laboratory/generator-krypgrund

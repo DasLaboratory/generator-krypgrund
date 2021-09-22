@@ -1,4 +1,4 @@
-# BigGulp Developer Notes
+# Developer Notes
 
 ### Publish new version to npm registry
 

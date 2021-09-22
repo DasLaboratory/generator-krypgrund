@@ -29,6 +29,8 @@ async function cleaning(destinationPath) {
 	console.log('                              • package.json');
 	console.log('                              • README.md\n\n');
 
+	showMessage('CLEANING...\n(This might take a minute.)');
+
 	del.sync([destinationPath + '/.browserslistrc']);
 	del.sync([destinationPath + '/.editorconfig']);
 	del.sync([destinationPath + '/.eslintignore']);
