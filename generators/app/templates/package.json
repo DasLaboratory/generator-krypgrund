@@ -1,12 +1,13 @@
 {
 	"name": "@das.laboratory/krypgrund",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "This workspace is equipped with BigGulp™ and a whole set of linting and formatting tools and all the packages required to pull this off.",
 	"main": "index.js",
 	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (https://daslaboritory.com)",
 	"license": "UNLICENSED",
 	"dependencies": {
 		"@das.laboratory/eslint-config-interactive": "latest",
+		"@das.laboratory/eslint-config-interactive-next": "latest",
 		"@das.laboratory/gulp-plugin-interactive": "latest",
 		"@das.laboratory/htmlhint-config-interactive": "latest",
 		"@das.laboratory/interactive-config-main": "latest",
